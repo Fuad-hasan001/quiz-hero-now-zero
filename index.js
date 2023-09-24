@@ -12,6 +12,7 @@ let submitContainer = document.querySelector("#submitContainer");
 let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
+let btnSubmit = document.querySelector("#submit");
 
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
@@ -23,8 +24,8 @@ startQuiz.addEventListener("click", () => {
 
   let x = setInterval(() => {
     if (counterNum < 0) {
-      coutDown.classList.remove("flex");
-      coutDown.classList.add("hidden");
+      countDown.classList.remove("flex"); //solved
+      countDown.classList.add("hidden"); //solved
       counterNum = 3;
       count = 0;
       timer = null;
@@ -46,43 +47,52 @@ startQuiz.addEventListener("click", () => {
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json;
+  const data = await res.json(); //
   quizData = data;
-  displayQuiz(data);
+  console.log('quizData:', quizData);
+  displayQuiz(quizData);
 };
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
+
   if (!data) {
     quizContainer.innerHTML = "";
     return;
   }
 
-  data.forEach((quiz, i) => {
-    quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
-  <div class="flex items-center">
-    <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
-      ${i + 1}
-    </div>
-    <p class="text-gray-800 text-sm">${quiz.quetion}</p>
-  </div>
-  <div class="grid grid-cols-2 gap-4 mt-5">
-    ${displayQuizOptions(quiz.options, i)}
-  </div>
-</div>`;
-  });
+  else{
+    data.forEach((quiz, i) => {
+      console.log('data2 from display: , i', quiz, i);
+    
+          quizContainer.innerHTML = `
+          <div class="m-3 py-3 px-4 shadow-sm rounded">
+            <div class="flex items-center">
+              <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center  text-green-800 mr-3">
+                ${i + 1}
+              </div>
+              <p class="text-gray-800 text-sm">${quiz.question}</p>
+            </div>
+    
+            <div class="grid grid-cols-2 gap-4 mt-5">
+              ${displayQuizOptions(quiz.options, i)}
+            </div>
+          </div>`;
+          
+        });
+  }
 };
-
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+btnSubmit.addEventListener("click", () => {
   if (answers.length < 6) {
-    return;
+    return ;
   }
   quizTimer(true);
-  answersContainer.innerHTML = `<div class="my-4">
-  <i class="fa-solid fa-fan animate-spin text-2xl text-green-600"></i>
-  <p class="text-xs animate-pulse">Please Wait, We are checking...</p>
-</div>`;
+  answersContainer.innerHTML = `
+      <div class="my-4">
+        <i class="fa-solid fa-fan animate-spin text-2xl text-green-600"></i>
+        <p class="text-xs animate-pulse">Please Wait, We are checking...</p>
+      </div>`;
   let timeTaken = document.querySelector("#count");
   let totalMark = 0;
   let grade = {
@@ -145,9 +155,10 @@ document.querySelector("#submit").addEventlistener("click", () => {
       ${totalMark}<span class="text-slate-800">/60</span>
     </h1>
     <p class="text-sm flex justify-center items-center gap-2">
-      Total Time: <span class="text-xl text-orange-500">${timeTaken.innerText.replace(
+      Total Time: <span class="text-xl text-orange-500">
+      ${timeTaken.innerText.replace(
         "sec",
-        ""
+        "1"
       )}<span class="text-xs">sec</span></span>
     </p>
   </div>
