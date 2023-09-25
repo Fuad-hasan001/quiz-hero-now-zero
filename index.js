@@ -39,6 +39,7 @@ startQuiz.addEventListener("click", () => {
       quizTimer();
       clearInterval(x);
     }
+    
     counter.innerText = counterNum;
     counterNum--;
   }, 1000);
@@ -147,8 +148,8 @@ btnSubmit.addEventListener("click", () => {
   // Right side bar/ answer section
   let x = setTimeout(() => {
     showAnswers(answers);
-    displayResult.innerHTML = `<div
-    class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
+    displayResult.innerHTML = `
+    <div class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
     <h3 class="text-xl ${grade.color}">${grade.status}</h3>
     <h1 class="text-3xl font-bold my-2">
@@ -158,7 +159,7 @@ btnSubmit.addEventListener("click", () => {
       Total Time: <span class="text-xl text-orange-500">
       ${timeTaken.innerText.replace(
         "sec",
-        "1"
+        ""
       )}<span class="text-xs">sec</span></span>
     </p>
   </div>
