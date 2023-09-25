@@ -15,40 +15,66 @@
             <div class="accordion w-75 mx-auto m-3" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Accordion Item #1
+                    <button class="accordion-button text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne ">
+                      Explain the differences between map, forEach, filter and find ?
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>map</strong> It returns a new array or value with the transformed data. Whereas <strong>forEach()</strong> methods returns undefined. However, <strong>filter()</strong> method also creates a new array but those which is matched to provided condition or varies the condition. On the flip side of the coin, <strong>find</strong> returns only the first element or value which is matched  or satisfies the given condition. If no values satisfy, then it returns undefined.
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Accordion Item #2
+                    <button class="accordion-button collapsed text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Explain the differences between local, session and cookies ?
                     </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>Local Storage</strong> In the browser dev tool, local storage is stored data, when the browser is closed. On the other hand, <strong>Session Storage</strong> is stored only for the current time(temporally), if the browser is closed all stored data are remove. However, <strong>Cookies</strong> that can stored small text like user login information and it can be expired after a specified amount of time until deleted by the user. 
                     </div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Accordion Item #3
+                    <button class="accordion-button collapsed text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      what is event loop ? How does it work ?
                     </button>
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <strong>Event Loop</strong> Mainly this loop constantly checks whether the call stack is empty or not. if the stack is empty the function is waiting to be executed in the <b>callback queue</b> and get pushed to the <b>call stack</b>. 
+                      Moreover, event loop can be executed only one task at a time. if any blocking operation will prevent other tasks from being executed until the blocking operation complete. 
                     </div>
                   </div>
                 </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="w-75 mt-5 mb-5 mx-auto gap-3">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card border border-warning border-3 rounded">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">Illustration: <span class="text-success fw-bold">quizTimer() Function</span></h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col ">
+                  <div class="card border border-warning border-3 rounded">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">Illustration: <span class="text-success fw-bold">chooseQuiz() Function</span></h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
         </div>
     </section>
