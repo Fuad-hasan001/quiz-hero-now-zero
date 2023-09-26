@@ -68,8 +68,6 @@ const displayQuiz = (data) => {
 
   else{
     data.forEach((quiz, i) => {
-      console.log('data2 from display: , i', quiz, i);
-    
           quizContainer.innerHTML += `
           <div class="m-3 py-3 px-4 shadow-sm rounded">
             <div class="flex items-center">
@@ -81,7 +79,6 @@ const displayQuiz = (data) => {
     
             <div class="grid grid-cols-2 gap-4 mt-5">
               ${displayQuizOptions(quiz.options, i)}
-              <p> hello</p>
             </div>
           </div>`;
           
@@ -125,7 +122,6 @@ btnSubmit.addEventListener("click", () => {
 
   // data setting on local storage and getting data from local storage
   let storage = JSON.parse(localStorage.getItem("result"));
-  // console.log('storage:', storage );
   if (storage) {
     localStorage.setItem(
       "results",
@@ -189,12 +185,11 @@ btnSubmit.addEventListener("click", () => {
                 <div>${item.examTime}</div>
               </div>`
             )
-            ?.join("")}
-            
-        </div>`
-      : ""
-      
+            ?.join("")}`
+            : ""
+             
   }
+  </div>
   
   `;
 
@@ -203,4 +198,3 @@ btnSubmit.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
 
-//{localStorage.clear();location.reload()}
