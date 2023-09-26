@@ -55,13 +55,18 @@
     </section>
 
     <section class="">
+        <div class="mt-5">
+            <h1 class="text-center pt-5 text-primary fw-bold" >Explanation About Function </h1>
+        </div>
         <div class="w-75 mt-5 mb-5 mx-auto gap-3">
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
                   <div class="card border border-warning border-3 rounded">
                     <div class="card-body">
                       <h5 class="card-title text-secondary">Illustration: <span class="text-success fw-bold">quizTimer() Function</span></h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text">The <strong>quizTimer</strong> is an arrow function which is mainly used for <b>manage countDown</b> system.<br> It takes only one parameter using (dismiss), which is a boolean value. If <b>(dismiss)</b> is <b>true</b> clearInterval executes with (timer) parameter which clears the timer that was previously set using setInterval and returns nothing. Whether, it passes <b>false</b>, the timer continue running, although exam finished or after submit button clicked. 
+                        
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -70,7 +75,8 @@
                   <div class="card border border-warning border-3 rounded">
                     <div class="card-body">
                       <h5 class="card-title text-secondary">Illustration: <span class="text-success fw-bold">chooseQuiz() Function</span></h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><strong>chooseQuiz</strong> Initially chooseQuiz function takes two parameter, <b>index and givenAns</b>. Mainly it checks the <b>given</b> ans and id options with <b>update</b> ans and id options. if it return true or does it <b>exist</b> than call <strong>displayQuizOption</strong> function which is help to visualize the new added option was clicked in the right side of quiz page.
+                      on the other hand, if it does not exist it returns index_no and answer in array.</p>
                     </div>
                   </div>
                 </div>
@@ -80,7 +86,5 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <script src="index.js"></script>
 </body>
 </html>

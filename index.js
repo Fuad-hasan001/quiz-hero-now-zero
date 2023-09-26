@@ -14,10 +14,8 @@ let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 let btnSubmit = document.querySelector("#submit");
 
-const btnBlog = () =>{
-  window.location.href = "blog.html";
-}
-const blogsContainer = document.getElementById("blogs-container");
+
+// const blogsContainer = document.getElementById("blogs-container");
 
 
 // EventListener for quiz start button
@@ -83,6 +81,7 @@ const displayQuiz = (data) => {
     
             <div class="grid grid-cols-2 gap-4 mt-5">
               ${displayQuizOptions(quiz.options, i)}
+              <p> hello</p>
             </div>
           </div>`;
           

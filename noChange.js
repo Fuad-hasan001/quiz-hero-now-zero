@@ -30,6 +30,7 @@ const quizTimer = (dismiss) => {
 
 // display quiz options
 const displayQuizOptions = (quiz, i) => {
+  console.log('quiz, i', quiz, i);
   let serial = 1;
   let generatedOptions = "";
   for (let option of quiz) {
@@ -46,6 +47,7 @@ const displayQuizOptions = (quiz, i) => {
 
 // select or choose quiz
 const chooseQuiz = (index, givenAns) => {
+  console.log('index, givenAns ', index, givenAns);
   const isExist = answers.find((ans) => ans.id === quizData[index].id);
   if (isExist) {
     let serial = 0;
